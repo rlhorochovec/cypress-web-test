@@ -3,7 +3,7 @@ const locators = {
         USUARIO: "#login",
         SENHA: "#senha",
         BOTAO: ".w-100",
-        MENSAGEM: "'#erro'"
+        MENSAGEM: "#erro"
     }
 }
 
