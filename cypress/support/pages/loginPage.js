@@ -7,7 +7,7 @@ Cypress.Commands.add('efetuaLogin', (usuario, senha) => {
     if (senha != '') {
         cy.get(loc.LOGIN.SENHA).type(senha).should('have.value', senha)
     }
-    cy.get(loc.LOGIN.BOTAO).click()
+    cy.get(loc.LOGIN.ENTRAR).click()
 })
 
 Cypress.Commands.add('validaMensagem', (mensagem) => {
