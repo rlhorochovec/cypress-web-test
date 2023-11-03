@@ -12,4 +12,5 @@ Cypress.Commands.add('efetuaLogin', (usuario, senha) => {
 
 Cypress.Commands.add('validaMensagem', (mensagem) => {
     cy.get(loc.LOGIN.MENSAGEM).should('have.text', mensagem)
+    cy.screenshot()
 })
