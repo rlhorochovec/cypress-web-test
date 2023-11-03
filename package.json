@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.3.0"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.6.1"
   }
 }
