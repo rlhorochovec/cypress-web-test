@@ -30,11 +30,9 @@ jobs:
           cp -r cypress/videos public/videos
           cp -r cypress/screenshots public/screenshots
 
-      - name: Generate HTML report
-        run: npm run generate:report
-
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          publish_brach: gh-pages
