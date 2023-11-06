@@ -23,3 +23,21 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
+          
+      - name: Copy test execution videos & screenshots
+        run: |
+          mkdir public
+          cp -r cypress/videos public/videos
+          cp -r cypress/screenshots public/screenshots
+
+      - name: Merge test results into one
+        run: npm run combine:report
+
+      - name: Generate HTML report
+        run: npm run generate:report
+
+      - name: Deploy report page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
