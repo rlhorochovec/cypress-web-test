@@ -13,13 +13,11 @@ jobs:
         uses: cypress-io/github-action@v5
       # After the test run completes
       # Store videos and any screenshots
-      - name: Upload Cypress screenshots
       - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
-      - name: Upload Cypress videos
       - uses: actions/upload-artifact@v3
         if: always()
         with:
