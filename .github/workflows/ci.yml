@@ -6,20 +6,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       # https://github.com/cypress-io/github-action
       - name: Cypress run
         uses: cypress-io/github-action@v5
-      
-      # After the test run completes
-      # Store videos and any screenshots
+
       - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
+
       - uses: actions/upload-artifact@v3
         if: always()
         with:
