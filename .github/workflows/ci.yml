@@ -27,8 +27,7 @@ jobs:
       - name: Copy test execution videos & screenshots
         run: |
           mkdir public
-          cp -r cypress/videos public/videos
-          cp -r cypress/screenshots public/screenshots
+          cp -r cypress/reports public/reports
 
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
