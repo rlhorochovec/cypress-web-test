@@ -24,8 +24,6 @@ Para rodar os testes, rode o seguinte comando
 ```
 
 ## Relatório dos testes
-https://rlhorochovec.github.io/cypress-web-test/reports/
-
 [Visualizar](https://rlhorochovec.github.io/cypress-web-test/reports/)
 
 ## Screenshots
