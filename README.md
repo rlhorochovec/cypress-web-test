@@ -27,3 +27,9 @@ Para rodar os testes, rode o seguinte comando
 https://rlhorochovec.github.io/cypress-web-test/reports/
 
 [Visualizar](https://rlhorochovec.github.io/cypress-web-test/reports/)
+
+## Screenshots
+<img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/Screenshots/cenarios_de_login.png" width="400" /> <img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/Screenshots/login_usuario_senha_incorretos.png" width="400" />
+
+## Demonstração
+[Assistir vídeo da execução](https://youtu.be/zyZV4cw70CY)
