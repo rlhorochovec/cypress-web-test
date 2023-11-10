@@ -4,6 +4,10 @@
 
 Projeto de automação de testes web utilizando Cypress, executando via GitHub Actions e publicando o relatório da execução no GitHub Pages.
 
+## Dependências
+- Cypress: 13.3.0
+- Mochawesome Reporter: 3.6.1
+
 ## Instalação
 Instale cypress-web-test com npm
 
@@ -11,10 +15,6 @@ Instale cypress-web-test com npm
   cd cypress-web-test
   npm install
 ```
-    
-## Dependências
-- Cypress: 13.3.0
-- Mochawesome Reporter: 3.6.1
 
 ## Rodando os testes
 Para rodar os testes, rode o seguinte comando
