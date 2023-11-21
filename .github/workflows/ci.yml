@@ -1,16 +1,24 @@
 name: cypress-web-test
-on: [push]
+on: push
 jobs:
   cypress-run:
+    name: Cypress run
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        with:
+          record: true
         env:
+          # pass the Cypress Cloud record key as an environment variable
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # pass the project ID from the secrets through environment variable
+          CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}
           
       - name: Copy test execution videos & screenshots
         run: |
