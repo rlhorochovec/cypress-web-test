@@ -2,7 +2,7 @@
 # cypress-web-test
 [![cypress-web-test](https://github.com/rlhorochovec/cypress-web-test/actions/workflows/ci.yml/badge.svg)](https://github.com/rlhorochovec/cypress-web-test/actions/workflows/ci.yml)
 
-Projeto de automação de testes web utilizando Cypress, executando via GitHub Actions e publicando o relatório da execução no GitHub Pages.
+Projeto de automação de testes web utilizando Cypress, executando via GitHub Actions e publicando o relatório da execução no GitHub Pages, integrado ao Cypress Cloud.
 
 ## Dependências
 - Cypress: 13.3.0
@@ -29,5 +29,9 @@ Para rodar os testes, rode o seguinte comando
 ## Demonstração
 [Assistir vídeo da execução](https://youtu.be/h7tQ55KCHN4)
 
+## Cypress Cloud
+[Assistir vídeo da execução no GitHub Actions e Cypress Cloud](https://youtu.be/vUnm3tt-PS4)
+
 ## Screenshots
 <img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/Screenshots/cenarios_de_login.png" width="400" /> <img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/Screenshots/login_usuario_senha_incorretos.png" width="400" />
+<img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/Screenshots/cypress_cloud.png" width="400" />
