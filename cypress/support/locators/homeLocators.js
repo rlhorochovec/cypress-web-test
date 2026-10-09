@@ -1,6 +1,6 @@
 const locators = {
     HOME: {    
-        TITULO: "#h2",
+        TITULO: "h1",
         DESCRICAO: "p",
     }
 }

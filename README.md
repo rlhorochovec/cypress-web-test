@@ -33,5 +33,5 @@ Para rodar os testes, rode o seguinte comando
 [Assistir vídeo da execução no GitHub Actions e Cypress Cloud](https://youtu.be/vUnm3tt-PS4)
 
 ## Screenshots
-<img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/Screenshots/cenarios_de_login.png" width="400" /> <img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/Screenshots/login_usuario_senha_incorretos.png" width="400" />
-<img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/Screenshots/cypress_cloud.png" width="400" />
+<img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/screenshots/cenarios_de_login.png" width="400" /> <img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/screenshots/login_usuario_senha_incorretos.png" width="400" />
+<img src="https://github.com/rlhorochovec/cypress-web-test/blob/develop/screenshots/cypress_cloud.png" width="400" />
