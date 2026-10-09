@@ -1,5 +1,10 @@
 name: cypress-web-test
-on: push
+
+on:
+  push:
+    branches: [ "develop", "main" ]
+  workflow_dispatch:
+    
 jobs:
   cypress-run:
     name: Cypress run
