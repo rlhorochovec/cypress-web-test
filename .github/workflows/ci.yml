@@ -1,36 +1,43 @@
-name: cypress-web-test
+name: Testes Web com Cypress
 
 on:
   push:
-    branches: [ "develop", "main" ]
+    branches:
+      - develop
+      - main
   workflow_dispatch:
     
 jobs:
   cypress-run:
-    name: Cypress run
+    name: Executar testes com Cypress
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      # Verifica (faz checkout) o seu repositório no $GITHUB_WORKSPACE para o job poder acessá-lo
+      - name: Verificar repositório
         uses: actions/checkout@v4
 
-      - name: Cypress run
+      # Executa os testes automatizados utilizando a action oficial do Cypress
+      - name: Executar testes Cypress
         uses: cypress-io/github-action@v6
         with:
+          # Grava os resultados no Cypress Cloud
           record: true
         env:
-          # pass the Cypress Cloud record key as an environment variable
+          # Passa a chave de gravação do Cypress Cloud como variável de ambiente
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          # Passa o token do GitHub para permitir detectar com precisão uma execução nova versus uma reexecução
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # pass the project ID from the secrets through environment variable
+          # Passa o ID do projeto através dos segredos por variável de ambiente
           CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}
           
-      - name: Copy test execution videos & screenshots
+      # Copia os relatórios gerados para a pasta pública
+      - name: Copiar vídeos e capturas de tela dos testes
         run: |
           mkdir public
           cp -r cypress/reports/html public/reports
 
-      - name: Deploy report page
+      # Publica a página de relatório gerada no GitHub Pages
+      - name: Publicar página de relatório
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
